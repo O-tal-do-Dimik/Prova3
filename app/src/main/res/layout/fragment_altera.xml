@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.atorapp.ui.altera.AlteraViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.cadastro.CadastroFragment">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@={viewmodel.ator.nome}"
+            android:inputType="textPersonName"
+            android:hint="Nome" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@={viewmodel.ator.nacionalidade}"
+            android:inputType="textPersonName"
+            android:hint="Nacionalidade" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@={viewmodel.ator.nacimento}"
+            android:inputType="text"
+            android:hint="Data de Nascimento" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@={viewmodel.ator.indicacao}"
+            android:inputType="textPersonName"
+            android:hint="Indicações" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@={viewmodel.ator.idade+``}"
+            android:hint="Idade" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@={viewmodel.ator.oscar+``}"
+            android:hint="Oscars" />
+
+        <Button
+            android:onClick="@{() -> viewmodel.onAlteraAtorStart()}"
+            android:id="@+id/botaoAlterar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alterar" />
+    </LinearLayout>
+</layout>
